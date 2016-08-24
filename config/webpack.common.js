@@ -163,7 +163,10 @@ module.exports = {
       {
         test: /\.(jpg|png|gif)$/,
         loader: 'file'
-      }
+      },
+
+      { test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/, loader: 'url-loader?limit=100000' }
+
     ]
 
   },
@@ -174,6 +177,13 @@ module.exports = {
    * See: http://webpack.github.io/docs/configuration.html#plugins
    */
   plugins: [
+
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery",
+        Hammer: "hammerjs/hammer"
+    }),
 
     /*
      * Plugin: ForkCheckerPlugin
