@@ -28,6 +28,9 @@ declare var $:any;
   templateUrl: './home.template.html'
 })
 export class Home {
+
+  items = ["a","b","c"];
+
   // Set our default values
   localState = { value: '' };
   // TypeScript public modifiers
