@@ -22,6 +22,7 @@
   </li>
   </ul>
   <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+  <a materialize="tooltip" class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">Hover me!</a>
   <img class="materialboxed" width="650" src="https://upload.wikimedia.org/wikipedia/commons/c/c4/PM5544_with_non-PAL_signals.png">
   <div materialize="carousel" [materializeParams]="[{full_width: true}]" class="carousel carousel-slider center" data-indicators="true">
     <div *ngFor="let item of items" class="carousel-item light-blue darken-2 white-text" href="#one!">
